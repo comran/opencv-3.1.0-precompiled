@@ -41,3 +41,17 @@ cc_library(
     visibility = ["//visibility:public"],
     linkstatic = 1,
 )
+
+cc_library(
+    name = "opencv_raspi_lib",
+    srcs = glob(["raspi/*.so*"]),
+    hdrs = glob([
+        "raspi/include/**/*.h",
+        "raspi/include/**/*.hpp",
+    ]),
+    includes = [
+        "raspi/include",
+    ],
+    visibility = ["//visibility:public"],
+    linkstatic = 1,
+)
