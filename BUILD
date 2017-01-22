@@ -44,7 +44,10 @@ cc_library(
 
 cc_library(
     name = "opencv_raspi_lib",
-    srcs = glob(["raspi/*.so*"]),
+    srcs = glob([
+        "raspi/system_libs/*",
+        "raspi/lib/*",
+    ]),
     hdrs = glob([
         "raspi/include/**/*.h",
         "raspi/include/**/*.hpp",
